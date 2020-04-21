@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+ 
+<display-name>HJ_board</display-name>
+<servlet>
+	<servlet-name>FrontController</servlet-name>
+	<servlet-class>jun.board.controller.BoardFrontController</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>FrontController</servlet-name>
+	<url-pattern>*.do</url-pattern>
+</servlet-mapping>
+<filter>
+	<filter-name>Encoding</filter-name>
+	<filter-class>jun.util.filter.EncodingFilter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>Encoding</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+ </web-app>
